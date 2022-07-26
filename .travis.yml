@@ -1,3 +1,4 @@
 language: bash
 script:
-  - echo test
+  - echo test greatest-common-divisor
+  - ./greatest_common_divisor_test.sh
