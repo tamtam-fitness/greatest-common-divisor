@@ -1,5 +1,16 @@
 #!/bin/bash
 
+validate_arg() {
+  # 自然数判定(0以外で始まる数値列)
+  if [[ $1 =~ ^[1-9][0-9]*$ ]]; then
+    return 0
+  else
+    echo "error: invalild arg" $1
+    exit 1
+  fi
+
+}
+
 call_gcd() {
     # ユークリッドの互除法で解く。
 
@@ -12,4 +23,6 @@ call_gcd() {
 	echo "$1"
 }
 
+validate_arg $1
+validate_arg $2
 call_gcd $1 $2
