@@ -18,8 +18,6 @@ echo "5" > $tmp-expected
 ./greatest_common_divisor.sh 5 10 > $tmp-got
 diff $tmp-expected $tmp-got || echo "error: case at (a < b)" >> $tmp-error
 
-
-
 echo "---AbNormal Case---"
 echo "when: there is no argument "
 echo "error: invalild arg" > $tmp-expected
