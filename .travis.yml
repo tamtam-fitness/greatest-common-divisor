@@ -1,5 +1,4 @@
 language: bash
 script:
   - echo test greatest-common-divisor
-  - echo Travis CI test in .travis.yml
   - ./greatest_common_divisor_test.sh
