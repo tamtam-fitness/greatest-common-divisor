@@ -24,10 +24,21 @@ echo "error: invalild arg" > $tmp-expected
 ./greatest_common_divisor.sh > $tmp-got
 diff $tmp-expected $tmp-got || echo " error: case at \"there is no argument\" " >> $tmp-error
 
-echo "there is only one argument"
+echo "when: there is only one argument"
 echo "error: invalild arg" > $tmp-expected
 ./greatest_common_divisor.sh > $tmp-got
 diff $tmp-expected $tmp-got || echo " error: case at \"there is only one argument\" " >> $tmp-error
+
+echo "when: args include minus number"
+echo "error: invalild arg" -21> $tmp-expected
+./greatest_common_divisor.sh -21 -19 > $tmp-got
+diff $tmp-expected $tmp-got || echo " error: case at \"args include minus number\" " >> $tmp-error
+
+echo "when: args include string"
+echo "error: invalild arg" abc> $tmp-expected
+./greatest_common_divisor.sh "abc" "efg" > $tmp-got
+diff $tmp-expected $tmp-got || echo " error: case at \"args include string\" " >> $tmp-error
+
 
 
 ERROR_EXIT () {
