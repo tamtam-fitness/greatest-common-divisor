@@ -4,6 +4,7 @@ jobs:
   gcd_test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: |
           echo test greatest-common-divisor
           echo Travis CI test in .travis.yml
