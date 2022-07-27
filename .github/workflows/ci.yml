@@ -1,0 +1,10 @@
+name: ShellScriptTest
+on: [push]
+jobs:
+  gcd_test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo test greatest-common-divisor
+          echo Travis CI test in .travis.yml
+          ./greatest_common_divisor_test.sh
