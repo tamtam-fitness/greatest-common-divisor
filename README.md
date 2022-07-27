@@ -16,3 +16,5 @@
 $ ./greatest_common_divisor.sh 12 6
 6
 ```
+# TestResults
+[![Image from Gyazo](https://i.gyazo.com/7cdbcec44ac32de0eb3dd0a4b8209708.png)](https://gyazo.com/7cdbcec44ac32de0eb3dd0a4b8209708)
